@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data Visualization Project (Single CSV)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Data Visualization Project</h1>
+    <nav>
+      <a href="#introduction">Introduction</a>
+      <a href="#data-info">Data Information</a>
+      <a href="#visualization">Visualizations</a>
+      <a href="#conclusion">Conclusion</a>
+    </nav>
+  </header>
+
+
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>
+      This project explores our single combined dataset, <em>cleaned.csv</em>.
+      By visualizing the data, we can uncover patterns and relationships not
+      obvious from raw numbers alone.
+    </p>
+  </section>
+
+ 
+  <section id="data-info">
+    <h2>Data Information</h2>
+    <p>
+      Our <strong>cleaned.csv</strong> file includes columns such as OPE ID,
+      School, State, Zip Code, School Type, Dependent/Independent student counts
+      for multiple quarters, and total quarterly counts.
+      <ul>
+        <li>
+          <strong>Chart 1 (Bar Chart):</strong> Top 10 schools by
+          <code>Quarterly Total_Q1</code>.
+        </li>
+        <li>
+          <strong>Chart 2 (Line Chart):</strong> Aggregate
+          <code>Quarterly Total_Q1</code> through <code>Quarterly Total_Q5</code>
+          across all schools, shown over quarters Q1..Q5.
+        </li>
+        <li>
+          <strong>Chart 3 (Scatter Plot):</strong> Relationship between
+          <code>Dependent Students_Q1</code> and
+          <code>Independent Students_Q1</code> for each school.
+        </li>
+        <li>
+          <strong>Chart 4 (Pie/Donut Chart):</strong> Breakdown of
+          <code>School Type</code> by sum of <code>Quarterly Total_Q1</code>.
+        </li>
+        <li>
+          <strong>Chart 5 (Stacked Bar Chart):</strong> Summed
+          <code>Dependent</code> vs. <code>Independent</code> students for each
+          quarter (Q1..Q5).
+        </li>
+      </ul>
+    </p>
+  </section>
+
+
+  <section id="visualization">
+    <h2>Visualizations</h2>
+    <p>
+      Below are five charts created from <em>cleaned.csv</em>. Hover over
+      elements to see tooltips with more details.
+    </p>
+
+    <div class="viz-container">
+      <h3>Chart 1: Bar Chart (Top 10 Schools by Q1)</h3>
+      <div id="viz1"></div>
+    </div>
+
+    <div class="viz-container">
+      <h3>Chart 2: Line Chart (Aggregate Totals over Q1..Q5)</h3>
+      <div id="viz2"></div>
+    </div>
+
+    <div class="viz-container">
+      <h3>Chart 3: Scatter Plot (Dependent vs. Independent in Q1)</h3>
+      <div id="viz3"></div>
+    </div>
+
+    <div class="viz-container">
+      <h3>Chart 4: Pie/Donut Chart (School Type by Q1 Total)</h3>
+      <div id="viz4"></div>
+    </div>
+
+    <div class="viz-container">
+      <h3>Chart 5: Stacked Bar Chart (Dep vs. Ind for Q1..Q5)</h3>
+      <div id="viz5"></div>
+    </div>
+  </section>
+
+
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+      In conclusion, <em>cleaned.csv</em> offers insight into how different
+      schools and student types vary across quarters. Future exploration might
+      involve deeper analysis of trends by state, or how these totals compare
+      across multiple years.
+    </p>
+  </section>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="visualize.js"></script>
+</body>
+</html>
